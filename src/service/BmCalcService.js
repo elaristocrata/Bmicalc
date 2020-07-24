@@ -1,6 +1,9 @@
+const logger = require('../logger/logger').logger;
+
 class BmCalcService {
     constructor() {
         this.performBmCalculator = (w,h) => {
+           logger.info(`BmiCalcService: w-${w}, h-${h}`);
             if (h == 0){
                 throw Error('El peso debe ser mayor a 0')
             }
